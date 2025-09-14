@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Автозагрузка сайта</title>
-  <meta http-equiv="refresh" content="600">
+<!--   <meta http-equiv="refresh" content="600"> -->
   <style>
     html, body {
       margin: 0;
@@ -25,7 +25,12 @@
       window.scrollBy(0, 1);
       window.scrollBy(0, -1);
     }, 30000);
+
+        setInterval(() => {
+          document.location.reload();
+    }, 60000);
   </script>
 </body>
 
 </html>
+
