@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Анти-заставка LG TV</title>
+  <!-- Автообновление каждые 600 секунд (10 минут) -->
+  <meta http-equiv="refresh" content="600">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>Телевизор не заснёт 💤</h1>
+  <p>Страница будет обновляться каждые 10 минут.</p>
+
+  <script>
+    // Каждые 30 секунд имитируем движение, чтобы избежать заставки
+    setInterval(() => {
+      window.scrollBy(0, 1);
+      window.scrollBy(0, -1);
+    }, 30000);
+  </script>
+</body>
+</html>
