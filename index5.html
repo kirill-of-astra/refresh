@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Автозагрузка сайта</title>
+  <meta http-equiv="refresh" content="600">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    video{
+      position: absolute;
+      top: 0;
+      left:0;
+      z-index: -1;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <video autoplay muted playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <script>
+      setInterval(() => {
+    const event = new MouseEvent('mousemove', {
+      bubbles: true,
+      cancelable: true,
+      clientX: 0,
+      clientY: 0
+    });
+    document.dispatchEvent(event);
+  }, 10000); 
+  </script>
+  <iframe src="https://dsp.shahaf.info/Pages/Display.aspx?id=b5135001"></iframe> 
+</body>
+</html>
